@@ -5,8 +5,14 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production node index.js",
+    "pm2:start": "NODE_ENV=production pm2 start index.js --name moviezz",
+    "pm2:restart": "NODE_ENV=production pm2 restart moviezz",
+    "pm2:stop": "NODE_ENV=production pm2 stop moviezz",
+    "pm2:delete": "NODE_ENV=production pm2 delete moviezz",
+    "pm2:logs": "NODE_ENV=production pm2 logs moviezz"
   },
   "author": "",
   "license": "ISC",
