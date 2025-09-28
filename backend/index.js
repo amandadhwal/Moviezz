@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 // api
 app.use("/api/v1/user", userRoute);
 
-app.use(express.static(path.join(__dirname, "..", "netflix", "build",)));
+app.use(express.static(path.join(__dirname, "..", "netflix", "build")));
 
 // Handle React routing, return all requests to React's index.html
 app.get("*", (req, res) => {
